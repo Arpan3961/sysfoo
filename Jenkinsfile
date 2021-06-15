@@ -7,14 +7,7 @@ pipeline {
         sh 'mvn compile'
       }
     }
-
-    stage('test') {
-      steps {
-        echo 'running sysfoo app'
-        sh 'mvn clean test'
-      }
-    }
-
+    
     stage('package') {
       steps {
         echo 'package sysfoo app'
